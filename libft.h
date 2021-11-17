@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:57:42 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/17 11:55:01 by arudy            ###   ########.fr       */
+/*   Created: 2021/11/17 10:03:45 by arudy             #+#    #+#             */
+/*   Updated: 2021/11/17 11:59:51 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
-}
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stdio.h>
+# include <unistd.h>
+
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+int	ft_strlen(int c);
+
+#endif
