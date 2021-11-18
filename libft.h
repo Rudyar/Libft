@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:03:45 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/17 21:12:41 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/18 11:19:26 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <string.h>
+#include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -27,6 +28,7 @@ int		ft_tolower(int c);
 int		ft_atoi(const char *str);
 int		strncmp(const char *s1, const char *s2, size_t n);
 char	*strdup(const char *src);
+char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
