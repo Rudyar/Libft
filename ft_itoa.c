@@ -6,45 +6,59 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 16:57:24 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/18 18:09:21 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/19 10:43:40 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int	n_len(long nbr)
 {
-	int				size;
-	unsigned int	nbr;
-	char			*dst;
-	
+	int	size;
+
 	size = 1;
-	nbr = n;
+	if (nbr < 0)
+	{
+		nbr *= -1;
+		size++;
+	}
 	while (nbr > 9)
 	{
 		nbr = nbr / 10;
 		size++;
 	}
-	if (n < 0)
-		size++;
+	return (size);
+}
+
+char	*ft_itoa(int n)
+{
+	int		size;
+	long	nbr;
+	char	*dst;
+
+	nbr = n;
+	size = n_len(nbr);
 	dst = malloc(sizeof(char) * (size + 1));
 	if (!dst)
 		return (NULL);
-	nbr = n;
-	dst[size] = '\0';
-	while (size > 0)
+	if (nbr < 0)
 	{
-		size--;
-		dst[size] = nbr % 10 + 48;
+		nbr *= -1;
+		dst[0] = '-';
+	}
+	dst[size] = '\0';
+	if (nbr == 0)
+		dst[0] = '0';
+	while (nbr != 0)
+	{
+		dst[--size] = nbr % 10 + 48;
 		nbr /= 10;
 	}
-	if (n < 0)
-		dst[size] = '-';
 	return (dst);
 }
 
 int	main(void)
 {
-	printf("%s\n", ft_itoa(-2345));
+	printf("%s\n", ft_itoa(2147483647));
 	return (0);
 }
