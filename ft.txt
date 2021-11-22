@@ -22,6 +22,7 @@
 • ft_itoa
 • strchr
 • strrchr
+• ft_substr    Checker les exeption
 
 
 Checker la norme !
@@ -33,7 +34,6 @@ Checker la norme !
 • memmove
 • memset
 • memchr
-• ft_substr
 • ft_strtrim
 • ft_strmapi ft pointer
 • ft_striteri ft pointer
