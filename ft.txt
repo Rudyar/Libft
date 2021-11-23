@@ -23,11 +23,10 @@
 • strchr
 • strrchr
 • ft_substr
+• ft_bzero
 
 
-Checker la norme !
 ------ Pas fait ------
-• bzero
 • calloc
 • memcpy
 • memcmp
