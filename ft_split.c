@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:10:28 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 11:03:50 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 17:08:08 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	count_word(char const *s, char charset)
 	return (count);
 }
 
-int	word_len(int i, char const *s, char charset)
+static int	word_len(int i, char const *s, char charset)
 {
 	int	len;
 

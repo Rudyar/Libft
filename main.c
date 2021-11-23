@@ -6,35 +6,39 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 16:38:29 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 17:19:43 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//---- ft_substr -----
+//-----------------------|
+//---- ft_substr --------|
+//-----------------------|
+
 // int	main(void)
 // {
 // printf("%s\n", ft_substr("Salut ca va ?", 4, 6));
 // return (0);
 // }
 
-// ---- ft_bzero -----
+//---------------------------------------------------------------------------------|
+// ---- ft_bzero --------|
 
 // int	main(void)
 // {
 // char	a[] = "Salut ca va";
 // char	b[] = "Salut ca va";
 
-// t_bzero(a, 4);
+// ft_bzero(a, 4);
 // bzero(b, 4);
-// printf("Mon ft_bzero : %c %c %c %c %c %c", a[0], a[1], a[2], a[3], a[4], a[5]);
-// printf("\n\n");
-// printf("Vrai bzero : '%c %c %c %c %c %c", b[0], b[1], b[2], b[3], b[4], b[5]);
+// printf("Mon ft_bzero : %c %c %c %c %c %c \n", a[0], a[1], a[2], a[3], a[4], a[5]);
+// printf("Vrai bzero   : %c %c %c %c %c %c", b[0], b[1], b[2], b[3], b[4], b[5]);
 // return (0);
 // }
 
-// ---- ft_split -----
+//---------------------------------------------------------------------------------|
+// ---- ft_split --------|
 
 // void ft_putstr(char *str)
 // {
@@ -64,6 +68,7 @@
     // return (0);
 // }
 
+//---------------------------------------------------------------------------------|
 // ---- ft_itoa -----
 
 // int	main(void)
@@ -72,6 +77,7 @@
 // 	return (0);
 // }
 
+//---------------------------------------------------------------------------------|
 // ---- ft_strjoin -----
 
 // int	main(void)
@@ -83,6 +89,7 @@
 // 	return (0);
 // }
 
+//---------------------------------------------------------------------------------|
 // ---- ft_strlcat -----
 
 // int	main(void)
@@ -94,6 +101,7 @@
 // 	return (0);
 // }
 
+//---------------------------------------------------------------------------------|
 // ---- ft_calloc -----
 
 // int	main(void)
@@ -110,6 +118,7 @@
 	// return 0;
 // }
 
+//---------------------------------------------------------------------------------|
 //---- ft_memcpy -----
 
 // int main(void)
@@ -135,6 +144,7 @@
 //     return (0);
 // }
 
+//---------------------------------------------------------------------------------|
 //---- ft_memcmp -----
 
 // int	main(void)
@@ -146,7 +156,9 @@
 // 	return (0);
 // }
 
+//---------------------------------------------------------------------------------|
 //---- ft_memmove -----
+
 // int	main(void)
 // {
 // 	char a[] = "blabla";
@@ -161,6 +173,30 @@
 // 	c1 = ft_memmove(a1, b1, 6);
 // 	printf("Mon memmove      : %s\n", c1);
 // 	return (0);
+// }
+
+//---------------------------------------------------------------------------------|
+//---- ft_memset -----
+
+// int	main(void)
+// {
+// char	a[] = "Salut ca va ?";
+// char	b[] = "Salut ca va ?";
+// char	d[] = "";
+// char	e[] = "";
+// char	f[] = "Salut ca va ?";
+// char	g[] = "Salut ca va ?";
+// char	c = 'z';
+// //--- Compiler sans les flags
+// printf("Mon memset      : %s\n", (char *)ft_memset(d, c, 0));
+// printf("The real memset : %s\n", (char *)memset(e, c, 0));
+
+// printf("Mon memset      : %s\n", (char *)ft_memset(a, c, 15));
+// printf("The real memset : %s\n", (char *)memset(b, c, 15));
+
+// printf("Mon memset      : %s\n", (char *)ft_memset(f, c, 1));
+// printf("The real memset : %s\n", (char *)memset(g, c, 1));
+// return (0);
 // }
 
 
