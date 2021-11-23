@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 14:14:35 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 14:29:43 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,9 +135,13 @@
 //     return (0);
 // }
 
-//---- ft_memcpy -----
+//---- ft_memcmp -----
 
-int	main(void)
-{
-	
-}
+// int	main(void)
+// {
+// 	char s1[] = "alut ca va ?";
+// 	char s2[] = "Salut ra va ?";
+// 	printf("Mon ft_memcmp : %d\n", ft_memcmp(s1, s2, 3));
+// 	printf("The real one : %d\n", memcmp(s1, s2, 3));
+// 	return (0);
+// }
