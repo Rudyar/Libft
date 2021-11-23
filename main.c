@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 13:20:05 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 14:14:35 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,20 +111,33 @@
 // }
 
 //---- ft_memcpy -----
-int main(void)
+
+// int main(void)
+// {
+// 	int	i = 0;
+// 	char	src[] = "Salut ca va ?";
+// 	char	*dest;
+// 	int	size = sizeof(char) * 1;
+
+// 	/*
+// 	int	src[]= {1, 2, 3, 4, 5};
+// 	int	*dest;
+// 	int	size = sizeof(char) * 5;
+// 	*/
+
+// 	dest = malloc(size);
+// 	ft_memcpy(dest, src, size);
+// 	while (i < size)
+// 	{
+// 		printf("%c ", dest[i]);
+// 		i++;
+// 	}
+//     return (0);
+// }
+
+//---- ft_memcpy -----
+
+int	main(void)
 {
-	int	i = 0;
-	int	src[] = {1, 2, 3, 4, 5};
-	int	*dest;
-	int	size = 5;
-
-	dest = malloc(sizeof(int) * size);
-	ft_memcpy(dest, src, size);
-	while (i < size)
-	{
-		printf("%d\n", dest[i]);
-		i++;
-	}
-    return (0);
+	
 }
-

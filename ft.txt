@@ -25,10 +25,10 @@
 • ft_substr
 • ft_bzero
 • ft_calloc
+• ft_memcpy
 
 
 ------ Pas fait ------
-• memcpy
 • memcmp
 • memmove
 • memset
