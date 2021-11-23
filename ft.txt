@@ -26,11 +26,11 @@
 • ft_bzero
 • ft_calloc
 • ft_memcpy
+• ft_memcmp
+• ft_memmove  a checker !
 
 
 ------ Pas fait ------
-• memcmp
-• memmove
 • memset
 • memchr
 • ft_strtrim
