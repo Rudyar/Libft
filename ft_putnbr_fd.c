@@ -6,16 +6,16 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:12:05 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/17 21:18:23 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 11:05:32 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	nb;
-	
+
 	nb = 0;
 	if (n < 0)
 	{

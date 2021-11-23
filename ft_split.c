@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:10:28 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/21 15:43:54 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 11:03:50 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ int	word_len(int i, char const *s, char charset)
 	return (len);
 }
 
-static char	*ft_strdup(int	i, char const *s, char charset)
+static char	*ft_strdup(int i, char const *s, char charset)
 {
 	int		w_len;
 	int		j;
 	char	*dst;
-	
+
 	w_len = word_len(i, s, charset);
 	j = 0;
 	dst = malloc(sizeof(char) * (w_len + 1));
@@ -80,11 +80,10 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	strs = malloc(sizeof(char *) * (count_word(s, c) + 1));
-	if(!strs)
+	if (!strs)
 		return (NULL);
 	if (!is_charset(s[i], c))
 		strs[j++] = ft_strdup(i, s, c);
-
 	while (s[i])
 	{
 		if (is_charset(s[i - 1], c) && !is_charset(s[i], c))
@@ -93,31 +92,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
-
-// void ft_putstr(char *str)
-// {
-//     int i;
-
-//     i = 0;
-//     while (str[i])
-//     {
-//         write(1, &str[i], 1);
-//         i++;
-//     }
-// }
-// 
-// int main(void)
-// {
-    // char **tab;
-    // int i;
-// 
-    // i = 0;
-// 
-    // tab = ft_split("c@eciestU@nsucces@!@", '@');
-    // while (i < 4)
-    // {
-        // ft_putstr(tab[i]);
-        // i++;
-    // }
-    // return (0);
-// }

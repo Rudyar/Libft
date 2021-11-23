@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:53:50 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/18 11:48:06 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 11:12:31 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (dst);
 }
-
-// int	main(void)
-// {
-// 	char	*s1 = "";
-// 	char	*s2 = "salut";
-	
-// 	printf("%s\n", ft_strjoin(s1, s2));
-// 	return (0);
-// }

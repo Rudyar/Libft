@@ -6,11 +6,11 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:06:05 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/17 21:09:56 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 11:08:37 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

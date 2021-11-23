@@ -6,13 +6,13 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:01:46 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/17 21:04:33 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 11:09:40 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 

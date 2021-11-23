@@ -22,7 +22,7 @@
 • ft_itoa
 • strchr
 • strrchr
-• ft_substr    Checker les exeption
+• ft_substr
 
 
 Checker la norme !
