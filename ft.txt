@@ -24,10 +24,10 @@
 • strrchr
 • ft_substr
 • ft_bzero
+• ft_calloc
 
 
 ------ Pas fait ------
-• calloc
 • memcpy
 • memcmp
 • memmove
