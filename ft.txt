@@ -29,10 +29,9 @@
 • ft_memcmp
 • ft_memmove  a checker !
 • ft_memset
-
+• ft_memchr
 
 ------ Pas fait ------
-• memchr
 • ft_strtrim
 • ft_strmapi ft pointer
 • ft_striteri ft pointer

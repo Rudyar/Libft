@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 17:19:43 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/23 18:17:18 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,4 +199,27 @@
 // return (0);
 // }
 
+//---------------------------------------------------------------------------------|
+//---- ft_memchr -----
+
+// int	main(void)
+// {
+// 	char	str[] = "salut ca va ?";
+// 	char	str1[] = "";
+// 	char	str2[] = "salut a va ?";
+// 	char	c = 'c';
+// 	char	c1 = 'c';
+// 	char	c2 = 'c';
+// 	int		n = 9;
+// 	int		n1 = 9;
+// 	int		n2 = 9;
+
+// 	printf("Mon ft_memchr   : %s\n", (char *)ft_memchr(str, c, n));
+// 	printf("The real memchr : %s\n", (char *)memchr(str, c, n));
+// 	printf("Mon ft_memchr   : %s\n", (char *)ft_memchr(str1, c1, n1));
+// 	printf("The real memchr : %s\n", (char *)memchr(str1, c1, n1));
+// 	printf("Mon ft_memchr   : %s\n", (char *)ft_memchr(str2, c2, n2));
+// 	printf("The real memchr : %s\n", (char *)memchr(str2, c2, n2));
+// 	return (0);
+// }
 
