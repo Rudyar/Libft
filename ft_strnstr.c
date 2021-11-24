@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 17:21:06 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 17:02:24 by arudy            ###   ########.fr       */
+/*   Created: 2021/11/24 17:11:57 by arudy             #+#    #+#             */
+/*   Updated: 2021/11/24 17:32:14 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	char	*dst;
+	int	i;
+	int	j;
 
-	dst = (char *)s;
 	i = 0;
-	while (i < n && s)
-	{
-		if (dst[i] == c)
-		{
-			return ((void *)s + i);
-		}
+	j = 0;
+	if (!little)
+		return (big);
+	while (big && little && big[i] != little[i])
 		i++;
+	while (big && little && big[i] == little[i])
+	{
+		if (!little)
+			return (big[i - j]);
+		i++;
+		j++;
 	}
-	return (0);
+
 }
+

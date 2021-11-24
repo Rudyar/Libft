@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 15:05:17 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/24 17:13:07 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,12 @@
 
 // int	main(void)
 // {
-// 	char s1a[10] = "Test1";
-// 	char s2a[] = "OK";
+// 	char s1[] = "aaaaaaaaaaaaaaa";
+// 	char s2[45];
 
-// 	printf("%d\n", ft_strlcat(s1a, s2a, 6));
+// 	printf("%ld\n", ft_strlcat(s1, s2, 25));
+// 	printf("Le vrai : %d\n", strlcat(s1, s2, 25));
+// 	printf("%s\n", s1);
 // 	return (0);
 // }
 
@@ -148,14 +150,14 @@
 //---------------------------------------------------------------------------------|
 //---- ft_memcmp -----
 
-int	main(void)
-{
-	char s1[] = "y\200";
-	char s2[] = "y\0";
-	printf("Mon ft_memcmp : %d\n", ft_memcmp(s1, s2, 2));
-	printf("The real one  : %d\n", memcmp(s1, s2, 2));
-	return (0);
-}
+// int	main(void)
+// {
+// 	char s1[] = "y\200";
+// 	char s2[] = "y\0";
+// 	printf("Mon ft_memcmp : %d\n", ft_memcmp(s1, s2, 2));
+// 	printf("The real one  : %d\n", memcmp(s1, s2, 2));
+// 	return (0);
+// }
 
 //---------------------------------------------------------------------------------|
 //---- ft_memmove -----
@@ -261,3 +263,10 @@ int	main(void)
 // 	return (0);
 // }
 
+
+//---------------------------------------------------------------------------------|
+//---- ft_strnstr -----
+int	main(void)
+{
+	
+}

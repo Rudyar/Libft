@@ -6,7 +6,7 @@
 #    By: arudy <arudy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 11:38:15 by arudy             #+#    #+#              #
-#    Updated: 2021/11/24 12:10:00 by arudy            ###   ########.fr        #
+#    Updated: 2021/11/24 17:43:57 by arudy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS =  ft_atoi.c ft_bzero.c \
 		ft_strrchr.c ft_strtrim.c \
 		ft_substr.c ft_tolower.c \
 		ft_toupper.c
+
 
 OBJS = ${SRCS:.c=.o}
 
