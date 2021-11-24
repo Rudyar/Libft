@@ -52,17 +52,8 @@ BONUS
 
 
 
-	// size_t			i;
-	// size_t			dst_len;
-	// unsigned char	tmp;
 
-	// i = 0;
-	// dst_len = ft_strlen(dest);
-	// printf("src_len : %ld\n", dst_len);
-	// while (i < n && i < dst_len)
-	// {
-	// 	tmp = ((char *)src)[i];
-	// 	((char *)dest)[i] = tmp;
+	// while (i < n - 1 && ((char *)s1)[i] && ((char *)s2)[i]
+	// 	&& ((char *)s1)[i] == ((char *)s2)[i])
 	// 	i++;
-	// }
-	// return (dest);
+	// return (((char *)s1)[i] - ((char *)s2)[i]);

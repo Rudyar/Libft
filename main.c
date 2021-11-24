@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 14:13:30 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/24 15:02:48 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,10 +150,10 @@
 
 // int	main(void)
 // {
-// 	char s1[] = "alut ca va ?";
-// 	char s2[] = "Salut ra va ?";
-// 	printf("Mon ft_memcmp : %d\n", ft_memcmp(s1, s2, 3));
-// 	printf("The real one : %d\n", memcmp(s1, s2, 3));
+// 	char s1[] = "salut ";
+// 	char s2[] = "";
+// 	printf("Mon ft_memcmp : %d\n", ft_memcmp(s1, s2, 2));
+// 	printf("The real one  : %d\n", memcmp(s1, s2, 2));
 // 	return (0);
 // }
 
