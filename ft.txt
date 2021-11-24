@@ -10,7 +10,6 @@
 • toupper
 • tolower
 • strncmp
-• strnstr
 • atoi
 • strdup
 • ft_putchar_fd
@@ -27,7 +26,7 @@
 • ft_calloc
 • ft_memcpy
 • ft_memcmp
-• ft_memmove  a checker !
+• ft_memmove
 • ft_memset
 • ft_memchr
 • ft_strtrim
@@ -35,6 +34,7 @@
 Checker les free
 
 ------ Pas fait ------
+• ft_strnstr
 • ft_strmapi ft pointer
 • ft_striteri ft pointer
 --------------
@@ -48,3 +48,21 @@ BONUS
 • ft_lstclear
 • ft_lstiter
 • ft_lstmap
+
+
+
+
+	// size_t			i;
+	// size_t			dst_len;
+	// unsigned char	tmp;
+
+	// i = 0;
+	// dst_len = ft_strlen(dest);
+	// printf("src_len : %ld\n", dst_len);
+	// while (i < n && i < dst_len)
+	// {
+	// 	tmp = ((char *)src)[i];
+	// 	((char *)dest)[i] = tmp;
+	// 	i++;
+	// }
+	// return (dest);

@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:10:28 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 17:08:08 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/24 12:11:56 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static int	word_len(int i, char const *s, char charset)
 	return (len);
 }
 
-static char	*ft_strdup(int i, char const *s, char charset)
+static char	*ft_mine_strdup(int i, char const *s, char charset)
 {
 	int		w_len;
 	int		j;
@@ -83,11 +83,11 @@ char	**ft_split(char const *s, char c)
 	if (!strs)
 		return (NULL);
 	if (!is_charset(s[i], c))
-		strs[j++] = ft_strdup(i, s, c);
+		strs[j++] = ft_mine_strdup(i, s, c);
 	while (s[i])
 	{
 		if (is_charset(s[i - 1], c) && !is_charset(s[i], c))
-			strs[j++] = ft_strdup(i, s, c);
+			strs[j++] = ft_mine_strdup(i, s, c);
 		i++;
 	}
 	return (strs);

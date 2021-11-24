@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 10:53:27 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/24 14:13:30 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,9 @@
 
 // int	main(void)
 // {
-// 	char	*s1 = "";
+// 	char	*s1 = "salut";
 // 	char	*s2 = "salut";
+// 	// s1[0] = '\0';
 
 // 	printf("%s\n", ft_strjoin(s1, s2));
 // 	return (0);
@@ -162,15 +163,15 @@
 // int	main(void)
 // {
 // 	char a[] = "blabla";
-// 	char b[] = "blabloup";
+// 	char b[] = "qwerrr";
 // 	char *c;
-// 	c = memmove(a, b, 6);
+// 	c = memmove(a + 3, b, 4);
 // 	printf("The real memmove : %s\n", c);
 
 // 	char a1[] = "blabla";
-// 	char b1[] = "blabloup";
+// 	char b1[] = "qwerrr";
 // 	char *c1;
-// 	c1 = ft_memmove(a1, b1, 6);
+// 	c1 = ft_memmove(a1 + 3, b1, 4);
 // 	printf("Mon memmove      : %s\n", c1);
 // 	return (0);
 // }

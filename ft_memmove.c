@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:52:48 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 15:38:17 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/24 14:07:56 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,24 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t			i;
-	unsigned char	tmp;
 
 	i = 0;
-	while (i < n)
+	if (src < dest)
 	{
-		tmp = ((char *)src)[i];
-		((char *)dest)[i] = tmp;
-		i++;
+		i = n;
+		while (i >= 1)
+		{
+			((char *)dest)[i - 1] = ((char *)src)[i - 1];
+			i--;
+		}
+	}
+	else
+	{
+		while (i < n)
+		{
+			((char *)dest)[i] = ((char *)src)[i];
+			i++;
+		}
 	}
 	return (dest);
 }
