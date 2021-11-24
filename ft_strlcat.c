@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:45:32 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 17:44:37 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/24 19:35:41 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (size + src_len);
 	if (size > 0)
 	{
-		while (src[i] && i < size - 1)
+		while (src[i] && j < size - 1)
 		{
 			dst[j] = src[i];
 			i++;
 			j++;
 		}
-		dst[i + dst_len] = '\0';
+		dst[j] = '\0';
 	}
 	return (dst_len + src_len);
 }
