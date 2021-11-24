@@ -48,12 +48,3 @@ BONUS
 • ft_lstclear
 • ft_lstiter
 • ft_lstmap
-
-
-
-
-
-	// while (i < n - 1 && ((char *)s1)[i] && ((char *)s2)[i]
-	// 	&& ((char *)s1)[i] == ((char *)s2)[i])
-	// 	i++;
-	// return (((char *)s1)[i] - ((char *)s2)[i]);
