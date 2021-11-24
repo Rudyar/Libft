@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 18:17:18 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/24 10:53:27 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,6 +220,43 @@
 // 	printf("The real memchr : %s\n", (char *)memchr(str1, c1, n1));
 // 	printf("Mon ft_memchr   : %s\n", (char *)ft_memchr(str2, c2, n2));
 // 	printf("The real memchr : %s\n", (char *)memchr(str2, c2, n2));
+// 	return (0);
+// }
+
+//---------------------------------------------------------------------------------|
+//---- ft_strtrim -----
+
+// int	main(void)
+// {
+// 	char	s1[] = "salut ca va ?";
+// 	char	set1[]= " ,";
+// 	printf("s1 avant trim : %s\n", s1);
+// 	printf("s1 apres trim : %s\n", ft_strtrim(s1, set1));
+// 	printf("----------\n");
+// 	char	s2[] = " ,, salut ca va ?  , ,";
+// 	char	set2[]= " ,";
+// 	printf("s1 avant trim : %s\n", s2);
+// 	printf("s1 apres trim : %s\n", ft_strtrim(s2, set2));
+// 	printf("----------\n");
+// 	char	s3[] = "";
+// 	char	set3[]= " ,";
+// 	printf("s1 avant trim : %s\n", s3);
+// 	printf("s1 apres trim : %s\n", ft_strtrim(s3, set3));
+// 	printf("----------\n");
+// 	char	s4[] = "salut ca va ?";
+// 	char	set4[]= "";
+// 	printf("s1 avant trim : %s\n", s4);
+// 	printf("s1 apres trim : %s\n", ft_strtrim(s4, set4));
+// 	printf("----------\n");
+// 	char	s5[] = ", , , ,   ,,, ,";
+// 	char	set5[]= " ,";
+// 	printf("s1 avant trim : %s\n", s5);
+// 	printf("s1 apres trim : %s\n", ft_strtrim(s5, set5));
+// 	printf("----------\n");
+// 	char	s6[] = "entrainement";
+// 	char	set6[]= "ent";
+// 	printf("s1 avant trim : %s\n", s6);
+// 	printf("s1 apres trim : %s\n", ft_strtrim(s6, set6));
 // 	return (0);
 // }
 
