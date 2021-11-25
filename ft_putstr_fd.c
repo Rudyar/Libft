@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:01:46 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/23 11:09:40 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 10:31:19 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putstr_fd(char *s, int fd)
 	{
 		while (s[i])
 		{
-			write(fd, &s, 1);
+			ft_putchar_fd(s[i], fd);
 			i++;
 		}
 	}
