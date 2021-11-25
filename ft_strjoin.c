@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:53:50 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 12:53:47 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 14:01:19 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		dst[i + j] = s2[j];
 		j++;
 	}
+	dst[i + j] = '\0';
 	return (dst);
 }
