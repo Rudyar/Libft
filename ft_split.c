@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 14:10:28 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 18:15:25 by arudy            ###   ########.fr       */
+/*   Created: 2021/11/25 21:58:42 by arudy             #+#    #+#             */
+/*   Updated: 2021/11/25 22:38:04 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,13 @@ static int	count_word(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	while (s[i] == c)
-		i++;
-	while (s && s[i])
-	{
-		count++;
-		while (s[i] && s[i] != c)
-			i++;
-		while (s[i] && s[i] == c)
-			i++;
-	}
-	return (count);
+    while (s[i])
+    {
+        if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+            count ++;
+        i++;
+    }
+    return (count);
 }
 
 static int	word_len(int i, char const *s, char c)
@@ -86,7 +82,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	strs = malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (!strs)
@@ -96,16 +92,12 @@ char	**ft_split(char const *s, char c)
 	}
 	if (s[i] != c)
 		strs[j++] = ft_mine_strdup(i, s, c, strs);
-	while (s[i++])
+	while (j < count_word(s, c))
 	{
+		i++;
 		if (s[i - 1] == c && s[i] != c)
-		{
 			strs[j++] = ft_mine_strdup(i, s, c, strs);
-			if (!strs[j])
-				return (NULL);
-		}
 	}
-	if (j == (count_word(s, c) + 1))
-		strs[j] = 0;
+	strs[j] = 0;
 	return (strs);
 }
