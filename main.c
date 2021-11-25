@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 13:54:57 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 15:05:33 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -360,3 +360,20 @@
 // {
 
 // }
+
+//---------------------------------------------------------------------------------|
+//---- ft_strmapi -----
+
+char	ft_tolower_i(unsigned i, char c)
+{
+	(void)i;
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
+}
+int	main(void)
+{
+	char str[] = "SALut CA vA ?";
+	printf("%s\n", ft_strmapi(str, &ft_tolower_i));
+	return (0);
+}

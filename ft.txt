@@ -14,7 +14,7 @@
 • strdup
 • ft_putchar_fd
 • ft_putstr_fd
-• ft_putendl_fd   Pas sur de l'utilisation de putstr
+• ft_putendl_fd
 • ft_putnbr_fd
 • ft_strjoin
 • ft_split    Pas free ??
@@ -30,11 +30,11 @@
 • ft_memset
 • ft_memchr
 • ft_strtrim
+• ft_strnstr
 
 Checker les free
 
 ------ Pas fait ------
-• ft_strnstr
 • ft_strmapi ft pointer
 • ft_striteri ft pointer
 --------------
