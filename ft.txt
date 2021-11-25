@@ -31,12 +31,12 @@
 • ft_memchr
 • ft_strtrim
 • ft_strnstr
+• ft_strmapi ft pointer
+• ft_striteri ft pointer
 
 Checker les free
 
 ------ Pas fait ------
-• ft_strmapi ft pointer
-• ft_striteri ft pointer
 --------------
 BONUS
 • ft_lstnew
