@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:10:28 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 12:11:56 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 13:43:35 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,6 @@ char	**ft_split(char const *s, char c)
 			strs[j++] = ft_mine_strdup(i, s, c);
 		i++;
 	}
+	strs[j] = 0;
 	return (strs);
 }

@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 10:23:04 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 13:54:57 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,32 +44,123 @@
 //---------------------------------------------------------------------------------|
 // ---- ft_split --------|
 
-// void ft_putstr(char *str)
+// void	print_res(char **tab)
 // {
-//     int i;
+// 	int	i;
 
-//     i = 0;
-//     while (str[i])
+// 	i = 0;
+//     while (tab[i] != NULL)
 //     {
-//         write(1, &str[i], 1);
+//         ft_putstr_fd(tab[i], 1);
+// 		ft_putchar_fd('\n', 1);
 //         i++;
 //     }
+// 	ft_putstr_fd("------------------------------\n", 1);
 // }
-//
+
 // int main(void)
 // {
-    // char **tab;
-    // int i;
+//     // char **tab;
+//     // char **tab1;
+//     // char **tab2;
+//     char **tab3;
+//     // char **tab4;
+//     // char **tab5;
 
-    // i = 0;
-//
-    // tab = ft_split("c@eciestU@nsucces@!@", '@');
-    // while (i < 4)
-    // {
-        // ft_putstr(tab[i]);
-        // i++;
-    // }
-    // return (0);
+// 	// ft_putstr_fd("------------------------------\n", 1);
+//     // tab = ft_split("       ", ' ');
+// 	// print_res(tab);
+
+//     // tab1 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+// 	// print_res(tab1);
+
+// 	// tab2 = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
+// 	// print_res(tab2);
+
+// 	tab3 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'i');
+// 	printf("main\n");
+// 	print_res(tab3);
+
+// 	// tab4 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'z');
+// 	// print_res(tab4);
+
+// 	// tab5 = ft_split("", 'z');
+// 	// print_res(tab5);
+// 	return (0);
+// }
+
+// Split 2
+// int    main()
+// {
+//     printf("Test 1 \n\n");
+
+//     char    a[] = ".";
+//     char    b = ' ';
+//     char    **strs1;
+//     int        count = 0;
+
+//     strs1 = ft_split(a, b);
+//     printf("Le texte a split :\".\" en fonction de \" \".\n");
+//     while (strs1[count] != 0)
+//     {
+//         printf("%s", strs1[count]);
+//         printf("\n");
+//         count++;
+//     }
+
+//     printf("Test 2 :\n\n");
+
+//     printf("Envoie de NULL en parametre 1.\n");
+//     printf("Si pas de segmentation fault, null s'affiche.\n");
+//     ft_split(NULL, ' ');
+//     printf("\"(null)\"\n\n");
+
+
+//     printf("Test 3 \n\n");
+
+//     char    e[] = "J'aime les pommes.";
+//     char    f = '\0';
+//     char    **strs3;
+
+//     count = 0;
+//     strs3 = ft_split(e, f);
+//     printf("Le texte a split :\"J'aime les pommes.\" en fonction de \"\\0\".\n");
+//     while (strs3[count] != 0)
+//     {
+//         printf("%s", strs3[count]);
+//         printf("\n");
+//         count++;
+//     }
+
+//     printf("Test 4 :\n\n");
+
+//     char    g[] = "";
+//     char    h = ' ';
+//     char    **strs4;
+
+//     strs4 = ft_split(g, h);
+//     printf("Le texte a split :\"\" en fonction de \" \".\n");
+//     printf("Ligne 1 : \"%s\"\n", strs4[0]);
+//     printf("Ligne 2 : \"%s\"\n\n", strs4[1]);
+
+
+//     printf("Test 5 :\n\n");
+
+//     char    i[] = "   J'aime les pommes.   ";
+//     char    j = ' ';
+//     char    **strs5;
+
+//     strs5 = ft_split(i, j);
+//     printf("Le texte a split :\"   J'aime les pommes.   \" en fonction de \" \".\n");
+//     printf("Ligne 1 : \"%s\"\n", strs5[0]);
+//     printf("Ligne 2 : \"%s\"\n", strs5[1]);
+//     printf("Ligne 3 : \"%s\"\n", strs5[2]);
+//     printf("Ligne 4 : \"%s\"", strs5[3]);
+//     // printf("Ligne 4 : \"%s\"", strs5[4]);
+//     printf("\n\n");
+
+
+//     return (0);
 // }
 
 //---------------------------------------------------------------------------------|

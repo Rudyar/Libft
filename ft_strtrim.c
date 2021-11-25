@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 09:44:58 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 10:46:09 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 13:54:24 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (is_in_set(s1[j], set))
 		j--;
 	size = j - i;
-	s2 = malloc(sizeof(char) * (size + 1));
+	s2 = malloc(sizeof(char *) * (size + 1));
 	if (!s2)
 		return (NULL);
 	while (i <= j && s1[i])
