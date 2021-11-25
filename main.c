@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 19:55:00 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 10:23:04 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@
 // int	main(void)
 // {
 // printf("%s\n", ft_substr("Salut ca va ?", 4, 6));
+// printf("%s\n", ft_substr("Salut ca va ?", 7, 10));
+// printf("%s\n", ft_substr("Salut ca va ?", 4, 0));
+// printf("%s\n", ft_substr("Salut ca va ?", 0, 0));
+// printf("%s\n", ft_substr("Salut ca va ?", 100, 40));
 // return (0);
 // }
 
@@ -263,5 +267,5 @@
 //---- ft_strnstr -----
 // int	main(void)
 // {
-	
+
 // }
