@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 15:58:17 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 17:06:33 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,50 +44,50 @@
 //---------------------------------------------------------------------------------|
 // ---- ft_split --------|
 
-// void	print_res(char **tab)
-// {
-// 	int	i;
+void	print_res(char **tab)
+{
+	int	i;
 
-// 	i = 0;
-//     while (tab[i] != NULL)
-//     {
-//         ft_putstr_fd(tab[i], 1);
-// 		ft_putchar_fd('\n', 1);
-//         i++;
-//     }
-// 	ft_putstr_fd("------------------------------\n", 1);
-// }
+	i = 0;
+    while (tab[i] != NULL)
+    {
+        ft_putstr_fd(tab[i], 1);
+		ft_putchar_fd('\n', 1);
+        i++;
+    }
+	ft_putstr_fd("------------------------------\n", 1);
+}
 
-// int main(void)
-// {
-//     // char **tab;
-//     // char **tab1;
-//     // char **tab2;
-//     char **tab3;
-//     // char **tab4;
-//     // char **tab5;
+int main(void)
+{
+    char **tab;
+    char **tab1;
+    char **tab2;
+    char **tab3;
+    char **tab4;
+    char **tab5;
 
-// 	// ft_putstr_fd("------------------------------\n", 1);
-//     // tab = ft_split("       ", ' ');
-// 	// print_res(tab);
+	ft_putstr_fd("------------------------------\n", 1);
+    tab = ft_split("       ", ' ');
+	print_res(tab);
 
-//     // tab1 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
-// 	// print_res(tab1);
+    tab1 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	print_res(tab1);
 
-// 	// tab2 = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
-// 	// print_res(tab2);
+	tab2 = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
+	print_res(tab2);
 
-// 	tab3 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'i');
-// 	printf("main\n");
-// 	print_res(tab3);
+	tab3 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'i');
+	printf("main\n");
+	print_res(tab3);
 
-// 	// tab4 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'z');
-// 	// print_res(tab4);
+	tab4 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'z');
+	print_res(tab4);
 
-// 	// tab5 = ft_split("", 'z');
-// 	// print_res(tab5);
-// 	return (0);
-// }
+	tab5 = ft_split("", 'z');
+	print_res(tab5);
+	return (0);
+}
 
 // Split 2
 // int    main()
@@ -382,16 +382,16 @@
 //---------------------------------------------------------------------------------|
 //---- ft_striteri -----
 
-void	ft_tolower_i(unsigned int i, char *c)
-{
-	(void)i;
-	if (*c >= 'A' && *c <= 'Z')
-		*c += 32;
-}
-int	main(void)
-{
-	char str[] = "SALut CA vA ?";
-	ft_striteri(str, &ft_tolower_i);
-	printf("%s\n", str);
-	return (0);
-}
+// void	ft_tolower_i(unsigned int i, char *c)
+// {
+// 	(void)i;
+// 	if (*c >= 'A' && *c <= 'Z')
+// 		*c += 32;
+// }
+// int	main(void)
+// {
+// 	char str[] = "SALut CA vA ?";
+// 	ft_striteri(str, &ft_tolower_i);
+// 	printf("%s\n", str);
+// 	return (0);
+// }

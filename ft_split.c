@@ -6,45 +6,51 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:10:28 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 13:43:35 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 18:15:25 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_charset(char c, char charset)
+static void	ft_free(char **strs)
 {
-	if (c == charset)
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (strs[i])
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
 }
 
-static int	count_word(char const *s, char charset)
+static int	count_word(char const *s, char c)
 {
 	int	i;
 	int	count;
 
 	i = 0;
 	count = 0;
-	while (is_charset(s[i], charset))
+	while (s[i] == c)
 		i++;
 	while (s && s[i])
 	{
 		count++;
-		while (s[i] && !is_charset(s[i], charset))
+		while (s[i] && s[i] != c)
 			i++;
-		while (s[i] && is_charset(s[i], charset))
+		while (s[i] && s[i] == c)
 			i++;
 	}
 	return (count);
 }
 
-static int	word_len(int i, char const *s, char charset)
+static int	word_len(int i, char const *s, char c)
 {
 	int	len;
 
 	len = 0;
-	while (s[i] && !is_charset(s[i], charset))
+	while (s[i] && s[i] != c)
 	{
 		len++;
 		i++;
@@ -52,17 +58,20 @@ static int	word_len(int i, char const *s, char charset)
 	return (len);
 }
 
-static char	*ft_mine_strdup(int i, char const *s, char charset)
+static char	*ft_mine_strdup(int i, char const *s, char c, char **strs)
 {
 	int		w_len;
 	int		j;
 	char	*dst;
 
-	w_len = word_len(i, s, charset);
+	w_len = word_len(i, s, c);
 	j = 0;
 	dst = malloc(sizeof(char) * (w_len + 1));
 	if (!dst)
+	{
+		ft_free(strs);
 		return (NULL);
+	}
 	while (j < w_len)
 		dst[j++] = s[i++];
 	dst[j] = '\0';
@@ -77,19 +86,26 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	strs = malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (!strs)
-		return (NULL);
-	if (!is_charset(s[i], c))
-		strs[j++] = ft_mine_strdup(i, s, c);
-	while (s[i])
 	{
-		if (is_charset(s[i - 1], c) && !is_charset(s[i], c))
-			strs[j++] = ft_mine_strdup(i, s, c);
-		i++;
+		ft_free(strs);
+		return (NULL);
 	}
-	strs[j] = 0;
+	if (s[i] != c)
+		strs[j++] = ft_mine_strdup(i, s, c, strs);
+	while (s[i++])
+	{
+		if (s[i - 1] == c && s[i] != c)
+		{
+			strs[j++] = ft_mine_strdup(i, s, c, strs);
+			if (!strs[j])
+				return (NULL);
+		}
+	}
+	if (j == (count_word(s, c) + 1))
+		strs[j] = 0;
 	return (strs);
 }

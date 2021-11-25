@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:21:06 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 17:02:24 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/25 16:36:42 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n && s)
 	{
-		if (dst[i] == c)
-		{
+		if (dst[i] == (char)c)
 			return ((void *)s + i);
-		}
 		i++;
 	}
 	return (0);
