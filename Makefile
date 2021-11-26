@@ -6,7 +6,7 @@
 #    By: arudy <arudy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 11:38:15 by arudy             #+#    #+#              #
-#    Updated: 2021/11/25 15:44:58 by arudy            ###   ########.fr        #
+#    Updated: 2021/11/26 16:36:53 by arudy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,11 @@ SRCS =  ft_atoi.c ft_bzero.c \
 		ft_toupper.c ft_strnstr.c \
 		ft_strmapi.c ft_striteri.c
 
+SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c \
 
 OBJS = ${SRCS:.c=.o}
+
+OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
 NAME = libft.a
 
@@ -47,8 +50,11 @@ ${NAME}:	${OBJS}
 
 all:	${NAME}
 
+bonus:	${OBJS_BONUS}
+			ar rc ${NAME} ${OBJS_BONUS}
+
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean: clean
 		${RM} ${NAME}

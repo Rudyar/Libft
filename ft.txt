@@ -34,12 +34,13 @@
 • ft_strmapi ft pointer
 • ft_striteri ft pointer
 
-Checker les free
 
+• ft_lstnew
+
+Faire Makefile BONUS
 ------ Pas fait ------
 --------------
 BONUS
-• ft_lstnew
 • ft_lstadd_front
 • ft_lstsize
 • ft_lstlast

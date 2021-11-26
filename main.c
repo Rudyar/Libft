@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/26 12:31:16 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 16:39:59 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 //-----------------------|
 
 // int	main(void)
-{
+// {
 // printf("%s\n", ft_substr("tripouille", 1, 1));
 // printf("%s\n", ft_substr("Salut ca va ?", 7, 10));
 // printf("%s\n", ft_substr("Salut ca va ?", 4, 0));
 // printf("%s\n", ft_substr("Salut ca va ?", 0, 0));
 // printf("%s\n", ft_substr("Salut ca va ?", 100, 40));
 // return (0);
-}
+// }
 
 //---------------------------------------------------------------------------------|
 // ---- ft_bzero --------|
@@ -352,5 +352,55 @@
 // 	char str[] = "SALut CA vA ?";
 // 	ft_striteri(str, &ft_tolower_i);
 // 	printf("%s\n", str);
+// 	return (0);
+// }
+
+//---------------------------------------------------------------------------------|
+//---- ft_lstnew -----
+// int	main(void)
+// {
+// 	t_list	*a;
+// 	t_list	*b;
+// 	void	*i = 42; // Compiler sans les flags !!!!
+// 	t_list	*c;
+
+// 	a = ft_lstnew("Bonjour");
+// 	b = ft_lstnew(NULL);
+// 	c = ft_lstnew(i);
+
+// 	printf("a.content : %s\n", (char *)a->content);
+// 	printf("a.next : %p\n", a->next);
+// 	printf("---------------------------------\n");
+// 	printf("b.content : %s\n", (char *)b->content);
+// 	printf("b.next : %p\n", b->next);
+// 	printf("---------------------------------\n");
+// 	printf("c.content : %d\n", c->content);
+// 	printf("c.next%p\n", c->next);
+// 	return (0);
+// }
+
+//---------------------------------------------------------------------------------|
+//---- ft_lstadd_front -----
+
+// int	main(void)
+// {
+// 	t_list	*a;
+// 	t_list	*b;
+// 	t_list	*c;
+// 	t_list	*start;
+
+// 	a = ft_lstnew("Je suis a");
+// 	b = ft_lstnew("Je suis b");
+// 	c = ft_lstnew("Je suis c");
+
+// 	ft_lstadd_front(&start, a);
+// 	ft_lstadd_front(&start, b);
+// 	ft_lstadd_front(&start, c);
+// 	while (start != NULL)
+// 	{
+// 		printf("%s\n", (char *)start->content);
+// 		start = start->next;
+// 		// Segfault ??
+// 	}
 // 	return (0);
 // }
