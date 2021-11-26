@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 22:34:57 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 11:03:10 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,51 +44,6 @@
 //---------------------------------------------------------------------------------|
 // ---- ft_split --------|
 
-void	print_res(char **tab)
-{
-	int	i;
-
-	i = 0;
-    while (tab[i] != NULL)
-    {
-        printf("%s\n", tab[i]);
-        i++;
-    }
-	printf("------------------------------\n");
-}
-
-int main(void)
-{
-    // char **tab;
-    // char **tab1;
-    // char **tab2;
-    // char **tab3;
-    // char **tab4;
-    char **tab5;
-
-	printf("------------------------------\n");
-    // tab = ft_split("       ", ' ');
-	// print_res(tab);
-
-    // tab1 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
-	// print_res(tab1);
-
-	// tab2 = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
-	// print_res(tab2);
-
-	// tab3 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'i');
-	// printf("main\n");
-	// print_res(tab3);
-
-	// tab4 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'z');
-	// print_res(tab4);
-
-	tab5 = ft_split("", 'z');
-	print_res(tab5);
-	return (0);
-}
-
-// Split 2
 // int    main()
 // {
 //     printf("Test 1 \n\n");

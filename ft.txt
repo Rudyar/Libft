@@ -17,7 +17,7 @@
 • ft_putendl_fd
 • ft_putnbr_fd
 • ft_strjoin
-• ft_split    Pas free ??
+• ft_split
 • ft_itoa
 • strchr
 • strrchr

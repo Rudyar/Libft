@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 21:58:42 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 22:38:04 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 10:51:55 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ static int	count_word(char const *s, char c)
 
 	i = 0;
 	count = 0;
-    while (s[i])
-    {
-        if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-            count ++;
-        i++;
-    }
-    return (count);
+	while (s[i] != '\0')
+	{
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+			count ++;
+		i++;
+	}
+	return (count);
 }
 
 static int	word_len(int i, char const *s, char c)
@@ -46,7 +46,7 @@ static int	word_len(int i, char const *s, char c)
 	int	len;
 
 	len = 0;
-	while (s[i] && s[i] != c)
+	while (s[i] != '\0' && s[i] != c)
 	{
 		len++;
 		i++;
@@ -68,8 +68,12 @@ static char	*ft_mine_strdup(int i, char const *s, char c, char **strs)
 		ft_free(strs);
 		return (NULL);
 	}
-	while (j < w_len)
-		dst[j++] = s[i++];
+	while (j < w_len && dst)
+	{
+		dst[j] = s[i];
+		j++;
+		i++;
+	}
 	dst[j] = '\0';
 	return (dst);
 }
@@ -90,7 +94,7 @@ char	**ft_split(char const *s, char c)
 		ft_free(strs);
 		return (NULL);
 	}
-	if (s[i] != c)
+	if (s[i] != c && s[i] != '\0')
 		strs[j++] = ft_mine_strdup(i, s, c, strs);
 	while (j < count_word(s, c))
 	{
@@ -98,6 +102,6 @@ char	**ft_split(char const *s, char c)
 		if (s[i - 1] == c && s[i] != c)
 			strs[j++] = ft_mine_strdup(i, s, c, strs);
 	}
-	strs[j] = 0;
+	strs[j] = NULL;
 	return (strs);
 }
