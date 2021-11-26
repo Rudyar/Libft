@@ -6,7 +6,7 @@
 #    By: arudy <arudy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 11:38:15 by arudy             #+#    #+#              #
-#    Updated: 2021/11/26 17:02:07 by arudy            ###   ########.fr        #
+#    Updated: 2021/11/26 17:06:04 by arudy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ SRCS =  ft_atoi.c ft_bzero.c \
 		ft_strmapi.c ft_striteri.c
 
 SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c \
-			ft_lstsize.c 
+			ft_lstsize.c ft_lstlast.c \
+
 OBJS = ${SRCS:.c=.o}
 
 OBJS_BONUS = ${SRCS_BONUS:.c=.o}

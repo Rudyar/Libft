@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/26 17:02:34 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 17:57:28 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -422,5 +422,23 @@
 
 
 // 	printf("Taille de la liste : %d\n", ft_lstsize(a));
+// 	return (0);
+// }
+
+//---------------------------------------------------------------------------------|
+//---- ft_lstlast -----
+
+// int	main(void)
+// {
+	// t_list	*a;
+	// t_list	*b;
+	// t_list	*c;
+
+	// a = ft_lstnew("Je suis a");
+	// b = ft_lstnew("Je suis b");
+	// c = ft_lstnew("Coucou, je suis le dernier");
+	// a->next = b;
+	// b->next = c;
+// 	printf("last.content : %s\n", (char *)ft_lstlast(c)->content);
 // 	return (0);
 // }
