@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:14:08 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 10:14:36 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 12:27:27 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ static int	malloc_size(char const *s, unsigned int start, size_t len)
 	int	size;
 
 	size = 0;
-	while (s[start] && size <= (int)len)
+	while (s[start] && size < (int)len)
 	{
 		size++;
 		start++;
 	}
-	return (size - 1);
+	return (size);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	unsigned int	size;
-	char			*dst;
+	size_t	i;
+	size_t	size;
+	char	*dst;
 
 	if (!s)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 09:44:58 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 13:54:24 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 11:58:24 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	is_in_set(char c, char const *set)
 	int	i;
 
 	i = 0;
+	if (!set)
+		return (0);
 	while (set[i])
 	{
 		if (c == set[i])
@@ -28,11 +30,11 @@ static int	is_in_set(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	int		k;
-	int		size;
-	char	*s2;
+	int				i;
+	int				j;
+	int				k;
+	unsigned int	size;
+	char			*s2;
 
 	i = 0;
 	j = ft_strlen(s1) - 1;
@@ -42,10 +44,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (is_in_set(s1[j], set))
 		j--;
 	size = j - i;
-	s2 = malloc(sizeof(char *) * (size + 1));
+	s2 = malloc(sizeof(char) * (size + 2));
 	if (!s2)
 		return (NULL);
-	while (i <= j && s1[i])
+	while (i <= j)
 	{
 		s2[k] = s1[i];
 		i++;

@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:53:50 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 14:01:19 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 12:08:59 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	total_len = ft_strlen(s1) + ft_strlen(s2);
-	dst = malloc(sizeof(char *) * (total_len + 1));
+	dst = malloc(sizeof(char) * (total_len + 1));
 	if (!dst)
 		return (NULL);
 	while (s1[i])

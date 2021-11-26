@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/26 11:03:10 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 12:31:16 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 //-----------------------|
 
 // int	main(void)
-// {
-// printf("%s\n", ft_substr("Salut ca va ?", 4, 6));
+{
+// printf("%s\n", ft_substr("tripouille", 1, 1));
 // printf("%s\n", ft_substr("Salut ca va ?", 7, 10));
 // printf("%s\n", ft_substr("Salut ca va ?", 4, 0));
 // printf("%s\n", ft_substr("Salut ca va ?", 0, 0));
 // printf("%s\n", ft_substr("Salut ca va ?", 100, 40));
 // return (0);
-// }
+}
 
 //---------------------------------------------------------------------------------|
 // ---- ft_bzero --------|
@@ -133,7 +133,7 @@
 // {
 // 	char	*s1 = "salut";
 // 	char	*s2 = "salut";
-// 	// s1[0] = '\0';
+// 	s1[0] = '\0';
 
 // 	printf("%s\n", ft_strjoin(s1, s2));
 // 	return (0);
@@ -275,35 +275,40 @@
 
 // int	main(void)
 // {
-// 	char	s1[] = "salut ca va ?";
-// 	char	set1[]= " ,";
-// 	printf("s1 avant trim : %s\n", s1);
-// 	printf("s1 apres trim : %s\n", ft_strtrim(s1, set1));
-// 	printf("----------\n");
-// 	char	s2[] = " ,, salut ca va ?  , ,";
-// 	char	set2[]= " ,";
-// 	printf("s1 avant trim : %s\n", s2);
-// 	printf("s1 apres trim : %s\n", ft_strtrim(s2, set2));
-// 	printf("----------\n");
-// 	char	s3[] = "";
-// 	char	set3[]= " ,";
-// 	printf("s1 avant trim : %s\n", s3);
-// 	printf("s1 apres trim : %s\n", ft_strtrim(s3, set3));
-// 	printf("----------\n");
-// 	char	s4[] = "salut ca va ?";
-// 	char	set4[]= "";
-// 	printf("s1 avant trim : %s\n", s4);
-// 	printf("s1 apres trim : %s\n", ft_strtrim(s4, set4));
-// 	printf("----------\n");
-// 	char	s5[] = ", , , ,   ,,, ,";
-// 	char	set5[]= " ,";
-// 	printf("s1 avant trim : %s\n", s5);
-// 	printf("s1 apres trim : %s\n", ft_strtrim(s5, set5));
-// 	printf("----------\n");
-// 	char	s6[] = "entrainement";
-// 	char	set6[]= "ent";
-// 	printf("s1 avant trim : %s\n", s6);
-// 	printf("s1 apres trim : %s\n", ft_strtrim(s6, set6));
+	// char	s1[] = "salut ca va ?";
+	// char	set1[]= " ,";
+	// printf("s1 avant trim : %s\n", s1);
+	// printf("s1 apres trim : %s\n", ft_strtrim(s1, set1));
+
+	// printf("----------\n");
+	// char	s2[] = " ,, salut ca va ?  , ,";
+	// char	set2[]= " ,";
+	// printf("s1 avant trim : %s\n", s2);
+	// printf("s1 apres trim : %s\n", ft_strtrim(s2, set2));
+
+	// printf("----------\n");
+	// char	s3[] = "";
+	// char	set3[]= " ";
+	// printf("s1 avant trim : %s\n", s3);
+	// printf("s1 apres trim : %s\n", ft_strtrim(s3, set3));
+
+	// printf("----------\n");
+	// char	s4[] = "salut ca va ?";
+	// char	set4[]= "";
+	// printf("s1 avant trim : %s\n", s4);
+	// printf("s1 apres trim : %s\n", ft_strtrim(s4, set4));
+
+	// printf("----------\n");
+	// char	s5[] = ", , , ,   ,,, ,";
+	// char	set5[]= " ,";
+	// printf("s1 avant trim : %s\n", s5);
+	// printf("s1 apres trim : %s\n", ft_strtrim(s5, set5));
+
+	// printf("----------\n");
+	// char	s6[] = "entrainement";
+	// char	set6[]= "ent";
+	// printf("s1 avant trim : %s\n", s6);
+	// printf("s1 apres trim : %s\n", ft_strtrim(s6, set6));
 // 	return (0);
 // }
 
