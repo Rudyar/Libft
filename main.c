@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/26 17:57:28 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/26 18:30:57 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -442,3 +442,23 @@
 // 	printf("last.content : %s\n", (char *)ft_lstlast(c)->content);
 // 	return (0);
 // }
+
+
+//---------------------------------------------------------------------------------|
+//---- ft_lstadd_back -----
+
+int	main(void)
+{
+	t_list	*a;
+	t_list	*b;
+	t_list	*c;
+	t_list	*d;
+	t_list	*start;
+
+	a = ft_lstnew("Je suis a");
+	b = ft_lstnew("Je suis b");
+	c = ft_lstnew("Je suis b");
+	d = ft_lstnew("Coucou, je suis le dernier");
+	printf("last.content : %s\n", (char *)ft_lstadd_back(start, d)->content);
+	return (0);
+}
