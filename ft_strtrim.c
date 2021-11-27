@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 09:44:58 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/26 11:58:24 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/27 14:25:50 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	size;
 	char			*s2;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	j = ft_strlen(s1) - 1;
 	k = 0;
@@ -48,11 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s2)
 		return (NULL);
 	while (i <= j)
-	{
-		s2[k] = s1[i];
-		i++;
-		k++;
-	}
+		s2[k++] = s1[i++];
 	s2[k] = '\0';
 	return (s2);
 }

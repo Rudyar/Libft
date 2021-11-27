@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:52:48 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/24 14:07:56 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/27 14:17:37 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
+	size_t	i;
 
 	i = 0;
 	if (src < dest)

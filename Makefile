@@ -6,7 +6,7 @@
 #    By: arudy <arudy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 11:38:15 by arudy             #+#    #+#              #
-#    Updated: 2021/11/27 12:35:35 by arudy            ###   ########.fr        #
+#    Updated: 2021/11/27 14:36:54 by arudy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,10 @@ all:	${NAME}
 
 bonus:	${OBJS_BONUS}
 			ar rc ${NAME} ${OBJS_BONUS}
+
+# so:
+# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) ${SRCS_BONUS}
+# 	gcc -nostartfiles -shared -o libft.so $(OBJS) ${OBJS_BONUS}
 
 clean:
 		${RM} ${OBJS} ${OBJS_BONUS}

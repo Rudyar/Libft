@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:15:02 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/25 16:12:20 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/27 14:23:53 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*dst;
 	unsigned int	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	dst = malloc(sizeof(char) * (ft_strlen(s)+ 1));
 	if (!dst)
