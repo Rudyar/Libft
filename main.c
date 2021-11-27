@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/27 13:31:42 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/27 14:40:54 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -466,50 +466,50 @@
 //---------------------------------------------------------------------------------|
 //---- ft_lstmap -----
 
-void	*touloueur(void *str)
-{
-	char	*dst;
+// void	*touloueur(void *str)
+// {
+// 	char	*dst;
 
-	dst = (char *)str;
-	while (dst)
-	{
-		if (*dst >= 'A' && *dst <= 'Z')
-			*dst += 32;
-		dst++;
-	}
-	return ((void *)dst);
-}
+// 	dst = (char *)str;
+// 	while (dst)
+// 	{
+// 		if (*dst >= 'A' && *dst <= 'Z')
+// 			*dst += 32;
+// 		dst++;
+// 	}
+// 	return ((void *)dst);
+// }
 
-void    del(void *content)
-{
-	(void)content;
-}
+// void    del(void *content)
+// {
+// 	(void)content;
+// }
 
-int	main(void)
-{
-	t_list	*a;
-	t_list	*b;
-	t_list	*c;
-	t_list	*d;
-	t_list	*start;
-	t_list	*res;
+// int	main(void)
+// {
+// 	t_list	*a;
+// 	t_list	*b;
+// 	t_list	*c;
+// 	t_list	*d;
+// 	t_list	*start;
+// 	t_list	*res;
 
-	a = ft_lstnew("Je suis a");
-	b = ft_lstnew("Je suis b");
-	c = ft_lstnew("Je suis b");
-	d = ft_lstnew("Coucou, je suis le dernier");
-	ft_lstadd_front(&start, a);
-	ft_lstadd_front(&start, b);
-	ft_lstadd_front(&start, c);
-	ft_lstadd_front(&start, d);
+// 	a = ft_lstnew("Je suis a");
+// 	b = ft_lstnew("Je suis b");
+// 	c = ft_lstnew("Je suis b");
+// 	d = ft_lstnew("Coucou, je suis le dernier");
+// 	ft_lstadd_front(&start, a);
+// 	ft_lstadd_front(&start, b);
+// 	ft_lstadd_front(&start, c);
+// 	ft_lstadd_front(&start, d);
 
-	res = ft_lstmap(start, &touloueur, &del);
-	printf("yoyoy\n");
-	while (res)
-	{
-		printf("%s\n", (char *)res->content);
-		res = res->next;
-	}
+// 	res = ft_lstmap(start, &touloueur, &del);
+// 	printf("yoyoy\n");
+// 	while (res)
+// 	{
+// 		printf("%s\n", (char *)res->content);
+// 		res = res->next;
+// 	}
 
-	return (0);
-}
+// 	return (0);
+// }
