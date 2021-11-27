@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 12:34:54 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/27 16:20:03 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/27 18:31:51 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	t_list	*alst;
 	t_list	*new;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
-
+	new = NULL;
 	while (lst)
 	{
-		new = malloc(sizeof(t_list));
-		if(!new)
+		new = ft_lstnew(lst);
+		f(new->content);
+		if (!new)
 		{
-			del(new);
-			free(new);
+			ft_lstclear(&alst, del);
 			return (NULL);
 		}
-		new->content = f(lst);
-		new = new->next;
+		ft_lstadd_back(&alst, new);
 		lst = lst->next;
 	}
-	return (new);
+	return (alst);
 }
