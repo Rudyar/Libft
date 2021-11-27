@@ -38,14 +38,13 @@
 • ft_lstadd_front
 • ft_lstnew
 • ft_lstsize
+• ft_lstlast // A revoir
+• ft_lstadd_back // A revoir
+• ft_lstdelone // A revoir
 
-Faire Makefile BONUS
 ------ Pas fait ------
 --------------
 BONUS
-• ft_lstlast
-• ft_lstadd_back
-• ft_lstdelone
 • ft_lstclear
 • ft_lstiter
 • ft_lstmap

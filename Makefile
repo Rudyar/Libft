@@ -6,7 +6,7 @@
 #    By: arudy <arudy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 11:38:15 by arudy             #+#    #+#              #
-#    Updated: 2021/11/26 18:00:15 by arudy            ###   ########.fr        #
+#    Updated: 2021/11/27 10:59:28 by arudy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ SRCS =  ft_atoi.c ft_bzero.c \
 
 SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c \
 			ft_lstsize.c ft_lstlast.c \
-			ft_lstadd_back.c 
+			ft_lstadd_back.c ft_lstdelone.c \
+			
 
 OBJS = ${SRCS:.c=.o}
 
