@@ -41,12 +41,12 @@
 • ft_lstlast // A revoir
 • ft_lstadd_back // A revoir
 • ft_lstdelone // A revoir
+• ft_lstclear // A revoir
+• ft_lstiter // A revoir
 
 ------ Pas fait ------
 --------------
 BONUS
-• ft_lstclear
-• ft_lstiter
 • ft_lstmap
 
 
