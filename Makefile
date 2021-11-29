@@ -6,7 +6,7 @@
 #    By: arudy <arudy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 11:38:15 by arudy             #+#    #+#              #
-#    Updated: 2021/11/27 14:55:09 by arudy            ###   ########.fr        #
+#    Updated: 2021/11/29 12:04:37 by arudy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,13 +46,13 @@ RM = rm -fr
 
 CFLAGS = -Wall -Wextra -Werror
 
+all:	${NAME}
+
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
-
-all:	${NAME}
 
 bonus:	${OBJS_BONUS}
 			ar rc ${NAME} ${OBJS_BONUS}

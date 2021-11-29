@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:19:37 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/27 18:22:19 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/29 15:39:38 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list	*current;
+	t_list	*next;
 
-	t_list	*tmp;
-
-	if (!del || !lst)
-		*lst = NULL;
-	while (lst)
+	current = *lst;
+	while (current)
 	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = tmp;
+		next = current->next;
+		ft_lstdelone(current, del);
+		current = next;
 	}
-	free(lst);
+	current = NULL;
 }

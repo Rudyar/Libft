@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 21:58:42 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/29 10:47:53 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/29 15:47:56 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ static void	ft_free(char **strs)
 	free(strs);
 }
 
-static int	count_word(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
 	int	i;
 	int	count;
 
 	i = 0;
 	count = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			count ++;
@@ -41,71 +41,63 @@ static int	count_word(char const *s, char c)
 	return (count);
 }
 
-static int	word_len(int i, char const *s, char c)
+static size_t	malloc_size(char const *s, size_t i, char c)
 {
-	int	len;
+	size_t	size;
 
-	len = 0;
-	while (s[i] != '\0' && s[i] != c)
+	size = 0;
+	while (s[i] && s[i] != c)
 	{
-		len++;
+		size++;
 		i++;
 	}
-	return (len);
+	return (size);
 }
 
-static char	*ft_mine_strdup(int i, char const *s, char c, char **strs)
+static size_t	mine_substr(char const *s, size_t i, char *strs, char c)
 {
-	int		w_len;
-	int		j;
-	char	*dst;
+	size_t	j;
 
-	w_len = word_len(i, s, c);
+	if (!s)
+		return (0);
 	j = 0;
-	dst = malloc(sizeof(char) * (w_len + 1));
-	if (!dst)
+	while (s[i] && s[i] != c)
 	{
-		ft_free(strs);
-		return (NULL);
-	}
-	while (j < w_len && dst)
-	{
-		dst[j] = s[i];
-		j++;
+		strs[j] = s[i];
 		i++;
+		j++;
 	}
-	dst[j] = '\0';
-	return (dst);
+	strs[j] = '\0';
+	while (s[i] == c)
+		i++;
+	return (i);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**strs;
-	int		i;
-	int		j;
+	char		**strs;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
 	j = 0;
 	if (!s)
-	{
-		strs = malloc(sizeof(void *) * 1);
-		strs[j] = NULL;
-		return (strs);
-	}
+		return (NULL);
 	strs = malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (!strs)
-	{
-		ft_free(strs);
 		return (NULL);
-	}
-	if (s[i] != c && s[i] != '\0')
-		strs[j++] = ft_mine_strdup(i, s, c, strs);
+	while (s[i] == c)
+		i++;
 	while (j < count_word(s, c))
 	{
-		i++;
-		if (s[i - 1] == c && s[i] != c)
-			strs[j++] = ft_mine_strdup(i, s, c, strs);
+		strs[j] = malloc(sizeof(char *) * (malloc_size(s, i, c) + 1));
+		if (!strs[j])
+		{
+			ft_free(strs);
+			return (NULL);
+		}
+		i = mine_substr(s, i, strs[j++], c);
 	}
-	strs[j] = NULL;
+	strs[j] = 0;
 	return (strs);
 }

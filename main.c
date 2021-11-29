@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/27 14:40:54 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/29 15:39:56 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,54 +48,54 @@
 // {
 //     printf("Test 1 \n\n");
 
-//     char    a[] = ".";
-//     char    b = ' ';
-//     char    **strs1;
-//     int        count = 0;
+    // char    a[] = ".";
+    // char    b = ' ';
+    // char    **strs1;
+    // int        count = 0;
 
-//     strs1 = ft_split(a, b);
-//     printf("Le texte a split :\".\" en fonction de \" \".\n");
-//     while (strs1[count] != 0)
-//     {
-//         printf("%s", strs1[count]);
-//         printf("\n");
-//         count++;
-//     }
+    // strs1 = ft_split(a, b);
+    // printf("Le texte a split :\".\" en fonction de \" \".\n");
+    // while (strs1[count] != 0)
+    // {
+    //     printf("%s", strs1[count]);
+    //     printf("\n");
+    //     count++;
+    // }
 
-//     printf("Test 2 :\n\n");
+    // printf("Test 2 :\n\n");
 
-//     printf("Envoie de NULL en parametre 1.\n");
-//     printf("Si pas de segmentation fault, null s'affiche.\n");
-//     ft_split(NULL, ' ');
-//     printf("\"(null)\"\n\n");
+    // printf("Envoie de NULL en parametre 1.\n");
+    // printf("Si pas de segmentation fault, null s'affiche.\n");
+    // ft_split(NULL, ' ');
+    // printf("\"(null)\"\n\n");
 
 
-//     printf("Test 3 \n\n");
+    // printf("Test 3 \n\n");
 
-//     char    e[] = "J'aime les pommes.";
-//     char    f = '\0';
-//     char    **strs3;
+    // char    e[] = "J'aime les pommes.";
+    // char    f = '\0';
+    // char    **strs3;
 
-//     count = 0;
-//     strs3 = ft_split(e, f);
-//     printf("Le texte a split :\"J'aime les pommes.\" en fonction de \"\\0\".\n");
-//     while (strs3[count] != 0)
-//     {
-//         printf("%s", strs3[count]);
-//         printf("\n");
-//         count++;
-//     }
+    // count = 0;
+    // strs3 = ft_split(e, f);
+    // printf("Le texte a split :\"J'aime les pommes.\" en fonction de \"\\0\".\n");
+    // while (strs3[count] != 0)
+    // {
+    //     printf("%s", strs3[count]);
+    //     printf("\n");
+    //     count++;
+    // }
 
-//     printf("Test 4 :\n\n");
+    // printf("Test 4 :\n\n");
 
-//     char    g[] = "";
-//     char    h = ' ';
-//     char    **strs4;
+    // char    g[] = "";
+    // char    h = ' ';
+    // char    **strs4;
 
-//     strs4 = ft_split(g, h);
-//     printf("Le texte a split :\"\" en fonction de \" \".\n");
-//     printf("Ligne 1 : \"%s\"\n", strs4[0]);
-//     printf("Ligne 2 : \"%s\"\n\n", strs4[1]);
+    // strs4 = ft_split(g, h);
+    // printf("Le texte a split :\"\" en fonction de \" \".\n");
+    // printf("Ligne 1 : \"%s\"\n", strs4[0]);
+    // printf("Ligne 2 : \"%s\"\n\n", strs4[1]);
 
 
 //     printf("Test 5 :\n\n");
@@ -449,22 +449,47 @@
 
 // int	main(void)
 // {
-// 	t_list	*a;
-// 	t_list	*b;
-// 	t_list	*c;
-// 	t_list	*d;
-// 	t_list	*start;
 
-// 	a = ft_lstnew("Je suis a");
-// 	b = ft_lstnew("Je suis b");
-// 	c = ft_lstnew("Je suis b");
-// 	d = ft_lstnew("Coucou, je suis le dernier");
-// 	printf("last.content : %s\n", (char *)ft_lstadd_back(start, d)->content);
-// 	return (0);
 // }
 
 //---------------------------------------------------------------------------------|
+//---- ft_lstclear -----
+
+void	del(void *content)
+{
+	content = NULL;
+}
+
+int main(void)
+{
+	t_list	*a;
+	t_list	*b;
+	t_list	*c;
+	t_list	*d;
+	t_list	**start;
+
+	start = malloc(sizeof(t_list *));
+	a = ft_lstnew("Je suis a");
+	b = ft_lstnew("Je suis b");
+	c = ft_lstnew("Je suis c");
+	d = ft_lstnew("Coucou, je suis le dernier");
+	ft_lstadd_back(start, a);
+	ft_lstadd_back(start, b);
+	ft_lstadd_back(start, c);
+	ft_lstadd_back(start, d);
+	printf("Size avant lstclear : %d\n", ft_lstsize(a));
+	while (*start != NULL)
+	{
+		printf("%s\n", (char *)a->content);
+		a = a->next;
+	}
+	ft_lstclear(start, &del);
+	printf("Size apres lstclear : %d\n", ft_lstsize(a));
+	return (0);
+}
+//---------------------------------------------------------------------------------|
 //---- ft_lstmap -----
+
 
 // void	*touloueur(void *str)
 // {
