@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/29 15:39:56 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/29 17:28:07 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -457,7 +457,7 @@
 
 void	del(void *content)
 {
-	content = NULL;
+	(void)content;
 }
 
 int main(void)
@@ -466,24 +466,16 @@ int main(void)
 	t_list	*b;
 	t_list	*c;
 	t_list	*d;
-	t_list	**start;
 
-	start = malloc(sizeof(t_list *));
 	a = ft_lstnew("Je suis a");
 	b = ft_lstnew("Je suis b");
 	c = ft_lstnew("Je suis c");
 	d = ft_lstnew("Coucou, je suis le dernier");
-	ft_lstadd_back(start, a);
-	ft_lstadd_back(start, b);
-	ft_lstadd_back(start, c);
-	ft_lstadd_back(start, d);
+	ft_lstadd_back(&a, b);
+	ft_lstadd_back(&a, c);
+	ft_lstadd_back(&a, d);
 	printf("Size avant lstclear : %d\n", ft_lstsize(a));
-	while (*start != NULL)
-	{
-		printf("%s\n", (char *)a->content);
-		a = a->next;
-	}
-	ft_lstclear(start, &del);
+	ft_lstclear(&a, &del);
 	printf("Size apres lstclear : %d\n", ft_lstsize(a));
 	return (0);
 }

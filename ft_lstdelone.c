@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 10:57:52 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/29 15:16:16 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/29 17:54:08 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (lst)
 	{
-		del(lst);
-		free(lst->content);
+		del(lst->content);
+		free(lst);
 	}
 }
