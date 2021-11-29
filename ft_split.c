@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 21:58:42 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/27 14:33:40 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/29 10:47:53 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,11 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	if (!s)
-		return (NULL);
+	{
+		strs = malloc(sizeof(void *) * 1);
+		strs[j] = NULL;
+		return (strs);
+	}
 	strs = malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (!strs)
 	{
