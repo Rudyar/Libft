@@ -6,18 +6,20 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:14:08 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/26 12:27:27 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/29 19:52:23 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	malloc_size(char const *s, unsigned int start, size_t len)
+static size_t	malloc_size(char const *s, unsigned int start, size_t len)
 {
-	int	size;
+	size_t	size;
 
 	size = 0;
-	while (s[start] && size < (int)len)
+	if (start > ft_strlen(s))
+		return (size);
+	while (s[start] && size < len)
 	{
 		size++;
 		start++;

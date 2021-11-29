@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/29 17:28:07 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/29 19:55:58 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -455,30 +455,30 @@
 //---------------------------------------------------------------------------------|
 //---- ft_lstclear -----
 
-void	del(void *content)
-{
-	(void)content;
-}
+// void	del(void *content)
+// {
+// 	(void)content;
+// }
 
-int main(void)
-{
-	t_list	*a;
-	t_list	*b;
-	t_list	*c;
-	t_list	*d;
+// int main(void)
+// {
+// 	t_list	*a;
+// 	t_list	*b;
+// 	t_list	*c;
+// 	t_list	*d;
 
-	a = ft_lstnew("Je suis a");
-	b = ft_lstnew("Je suis b");
-	c = ft_lstnew("Je suis c");
-	d = ft_lstnew("Coucou, je suis le dernier");
-	ft_lstadd_back(&a, b);
-	ft_lstadd_back(&a, c);
-	ft_lstadd_back(&a, d);
-	printf("Size avant lstclear : %d\n", ft_lstsize(a));
-	ft_lstclear(&a, &del);
-	printf("Size apres lstclear : %d\n", ft_lstsize(a));
-	return (0);
-}
+// 	a = ft_lstnew("Je suis a");
+// 	b = ft_lstnew("Je suis b");
+// 	c = ft_lstnew("Je suis c");
+// 	d = ft_lstnew("Coucou, je suis le dernier");
+// 	ft_lstadd_back(&a, b);
+// 	ft_lstadd_back(&a, c);
+// 	ft_lstadd_back(&a, d);
+// 	printf("Size avant lstclear : %d\n", ft_lstsize(a));
+// 	ft_lstclear(&a, del);
+// 	printf("Size apres lstclear : %d\n", ft_lstsize(a));
+// 	return (0);
+// }
 //---------------------------------------------------------------------------------|
 //---- ft_lstmap -----
 
@@ -508,19 +508,17 @@ int main(void)
 // 	t_list	*b;
 // 	t_list	*c;
 // 	t_list	*d;
-// 	t_list	*start;
 // 	t_list	*res;
 
 // 	a = ft_lstnew("Je suis a");
 // 	b = ft_lstnew("Je suis b");
-// 	c = ft_lstnew("Je suis b");
+// 	c = ft_lstnew("Je suis c");
 // 	d = ft_lstnew("Coucou, je suis le dernier");
-// 	ft_lstadd_front(&start, a);
-// 	ft_lstadd_front(&start, b);
-// 	ft_lstadd_front(&start, c);
-// 	ft_lstadd_front(&start, d);
-
-// 	res = ft_lstmap(start, &touloueur, &del);
+// 	a->next = b;
+// 	b->next = c;
+// 	c->next = d;
+// 	d->next = NULL;
+// 	res = ft_lstmap(a, &touloueur, del);
 // 	printf("yoyoy\n");
 // 	while (res)
 // 	{
@@ -529,4 +527,4 @@ int main(void)
 // 	}
 
 // 	return (0);
-// }
+// } Marche pas
