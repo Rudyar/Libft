@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:22 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/29 19:55:58 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/30 11:02:32 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,24 @@
 // {
 //     printf("Test 1 \n\n");
 
-    // char    a[] = ".";
-    // char    b = ' ';
-    // char    **strs1;
-    // int        count = 0;
+//     char    a[] = "   Hello  42  ";
+//     char    b = ' ';
+//     char    **strs1;
+//     int        count = 0;
 
-    // strs1 = ft_split(a, b);
+//     strs1 = ft_split(a, b);
     // printf("Le texte a split :\".\" en fonction de \" \".\n");
-    // while (strs1[count] != 0)
-    // {
-    //     printf("%s", strs1[count]);
+
+    //     printf("%s\n", strs1[0]);
+	// 	printf("%ld\n", strlen(strs1[0]) + 1);
+	// 	printf("%ld", strlen("Hello") + 1);
     //     printf("\n");
-    //     count++;
-    // }
+    //     printf("%s\n", strs1[1]);
+	// 	printf("%ld\n", strlen(strs1[1]) + 1);
+	// 	printf("%ld", strlen("42") + 1);
+    //     printf("\n");
+
+
 
     // printf("Test 2 :\n\n");
 

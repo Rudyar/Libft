@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:14:08 by arudy             #+#    #+#             */
-/*   Updated: 2021/11/29 19:52:23 by arudy            ###   ########.fr       */
+/*   Updated: 2021/11/30 10:03:19 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dst = malloc(sizeof(char) * (size + 1));
 	if (!dst)
 		return (NULL);
-	if (start < size)
-	{
-		while (s[start] && i < size)
-			dst[i++] = s[start++];
-	}
+	while (i < size && s[start])
+		dst[i++] = s[start++];
 	dst[i] = '\0';
 	return (dst);
 }
